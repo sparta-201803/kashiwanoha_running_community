@@ -1,2 +1,9 @@
 <h1>Fashions#edit</h1>
 <p>Find me in app/views/fashions/edit.html.erb</p>
+
+<div class="row">
+  <div class="col-lg-12">
+    <h1>ファッション編集</h1>
+    <%= render partial: 'form', locals: { fashion: @fashion } %>
+  </div>
+</div>
