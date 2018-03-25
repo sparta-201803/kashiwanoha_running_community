@@ -21,6 +21,10 @@ class EventsController < ApplicationController
   end
 
   def edit
+    if current_user == nil then
+      redirect_to new_user_session_path
+    end
+
     @event = Event.find(params[:id])
 
   end
