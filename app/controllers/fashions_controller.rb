@@ -1,3 +1,4 @@
+
 class FashionsController < ApplicationController
   def index
     @fashions = Fashion.all
@@ -20,7 +21,7 @@ class FashionsController < ApplicationController
   end
 
   def update
-    
+
   end
 
   def show

@@ -4,5 +4,7 @@ class Event < ApplicationRecord
   validates :place, presence: true
   validates :description, presence: true
 
+  belongs_to :user
+
 # 省略
 end
