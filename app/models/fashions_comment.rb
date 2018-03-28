@@ -1,3 +1,3 @@
 class FashionsComment < ApplicationRecord
-  belongs_to :user
+  belongs_to :fashions
 end

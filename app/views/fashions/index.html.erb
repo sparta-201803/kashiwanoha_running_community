@@ -7,7 +7,7 @@
 
 body {
   margin: 0 auto;
-  max-width: 960px;
+  /* max-width: 960px; */
 }
 
 .grid {
@@ -126,12 +126,14 @@ body {
 </style>
 
 <ul class="grid">
-  <% @fashions.each do |fashion|  %>
-  <li class="grid_item span__1 a">
-    <a href="#" class="grid_link">
+  <% @fashions.each_with_index do |fashion, index|  %>
+    <% if index >= 5
+      break
+    end %>
+    <a href="fashions/<%=fashion.id%>" class="grid_link">
       <!-- <div class="tile">1</div> -->
-      <%= image_tag(fashion.image_url) %>
+      <li><%= image_tag(fashion.image_url) %></li>
     </a>
-  </li>
+
   <% end %>
 </ul>

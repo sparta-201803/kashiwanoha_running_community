@@ -26,6 +26,7 @@ class FashionsController < ApplicationController
 
   def show
     @fashion = Fashion.find(params[:id])
+    @comments = FashionsComment.all
   end
 
   def destroy
