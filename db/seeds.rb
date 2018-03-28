@@ -7,4 +7,5 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 10.times do |index|
   Event.create(event_name: "柏の葉公園ランニング", event_date: "３月２１日", place: "柏の葉公園", description: "３人くらい一緒にいきましょう")
+  FashionsComment.create(user_id: User.first.id, text: "いいですね.いいですね.いいですね.いいですね.")
 end

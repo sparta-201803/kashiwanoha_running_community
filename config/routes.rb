@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
    resources :fashions
+   resources :events
    resources :users
    resources :fashions_comments
    root 'fashions#index'

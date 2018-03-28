@@ -1,6 +1,41 @@
-<h1>Fashions#show</h1>
-<p>Find me in app/views/fashions/show.html.erb</p>
+<style>
+.fit-image{
+  height: 600px;
+  width: 400px;
+  object-fit: contain;
+}
+</style>
+<div class="row show">
+  <div class="col-md-5">
+    <%= image_tag(@fashion.image_url, class: "fit-image") %>
+  </div>
+  <div class="col-md-7">
+    <p><%= @fashion.description %></p>
+    <%= button_to "いいね", root_path, class: "btn btn-success"%>
+    <%= button_to "フォロー", root_path, class: "btn btn-primary"%>
 
-<%= @fashion.description %>
-<%= image_tag(@fashion.image_url) %>
+    <h4>コメント機能</h4>
+    <% @comments.each_with_index do |comment, index|  %>
+      <% if index >= 5
+        break
+      end %>
+      <div class="panel panel-default panel-body panel-style panel-body-image">
+        <!-- <div class="panel-body">
+         <div class="panel-style">
+           <div class="panel-body-image"> -->
+             <div>
+               <img src="https://image.freepik.com/free-icon/user-image-with-black-background_318-34564.jpg" alt="" width="60">
+             </div>
+             <div>
+               <strong><%= link_to comment.fashion.user.given_name, user_path(comment.fashion.user.id) %></strong>
+             </div>
+             <p style="color:black;"><%= comment.created_at %></p>
 
+             <p style="color:black;"><%= comment.text %></p>
+           <!-- </div>
+         </div>
+        </div> -->
+      </div>
+    <% end %>
+  </div>
+</div>

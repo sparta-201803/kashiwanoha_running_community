@@ -36,6 +36,9 @@ gem 'carrierwave'
 gem 'devise'
 gem 'kaminari'
 gem 'ransack'
+gem 'frontend-generators'
+
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
@@ -46,6 +49,7 @@ group :development, :test do
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
   gem 'sqlite3'
+
 end
 
 group :development do
