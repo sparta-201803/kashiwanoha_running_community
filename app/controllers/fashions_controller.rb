@@ -26,7 +26,9 @@ class FashionsController < ApplicationController
 
   def show
     @fashion = Fashion.find(params[:id])
-    @comments = FashionsComment.all
+    @comments = FashionsComment.where(fashion_id: params[:id])
+    @comments = @comments.order(created_at: :desc)
+
   end
 
   def destroy

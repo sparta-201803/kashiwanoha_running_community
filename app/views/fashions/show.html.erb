@@ -29,6 +29,8 @@
              <div>
                <strong><%= link_to comment.fashion.user.given_name, user_path(comment.fashion.user.id) %></strong>
              </div>
+             <p style="color:black;"><%= comment.created_at %></p>
+
              <p style="color:black;"><%= comment.text %></p>
            <!-- </div>
          </div>
